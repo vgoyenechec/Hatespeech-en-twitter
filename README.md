@@ -13,13 +13,13 @@ Debido a que las redes sociales son una gran influencia actualmente y que estas 
 ## Dataset
 
 * Detección de hatespeech en Inglés 
-   * Datos: 24.000 tweets clasificados como ofensivo, de odio, o ninguno. [(fuente)](https://data.world/thomasrdavidson/hate-speech-and-offensive-language)
+   * Datos: 24.783 tweets clasificados como ofensivo, de odio, o ninguno. [(fuente)](https://data.world/thomasrdavidson/hate-speech-and-offensive-language)
               
 * Detección de hatespeech en Español 
    * Colombia
-      * Datos: 24.000 tweets.
+      * Datos: 16.044 tweets.
    * Bucaramanga
-      * Datos: 24.000 tweets.
+      * Datos: 2.381 tweets.
 
 ## Video 
 https://www.youtube.com/watch?v=S7qOzw1CTnw
