@@ -13242,7 +13242,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="-Detecci&#243;n-de-Hate-Speech-en-Twitter-"><center> Detecci&#243;n de Hate Speech en Twitter </center><a class="anchor-link" href="#-Detecci&#243;n-de-Hate-Speech-en-Twitter-">&#182;</a></h1>
+<h1 id="-Detecci&#243;n-de-Hate-Speech-en-Twitter-en-Colombia"><center> Detecci&#243;n de Hate Speech en Twitter en Colombia</center><a class="anchor-link" href="#-Detecci&#243;n-de-Hate-Speech-en-Twitter-en-Colombia">&#182;</a></h1>
 </div>
 </div>
 </div><div class="fragment">
@@ -13252,47 +13252,15 @@ a.anchor-link {
 <h2 id="-Dataset-"><center> Dataset </center><a class="anchor-link" href="#-Dataset-">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tweets16</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia16.json&#39;</span><span class="p">)</span>
-<span class="n">tweets17</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia17.json&#39;</span><span class="p">)</span>
-<span class="n">tweets18</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia18.json&#39;</span><span class="p">)</span>
-<span class="n">tweets19</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia19.json&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tweets20</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia20.json&#39;</span><span class="p">)</span>
-<span class="n">tweets21</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia21.json&#39;</span><span class="p">)</span>
-<span class="n">tweets22</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia22.json&#39;</span><span class="p">)</span>
-<span class="n">tweets23</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia23.json&#39;</span><span class="p">)</span>
-<span class="n">tweets24</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia24.json&#39;</span><span class="p">)</span>
-<span class="n">tweets25</span> <span class="o">=</span> <span class="n">tweets_to_df</span><span class="p">(</span><span class="s1">&#39;colombia25.json&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13305,7 +13273,18 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(16044, 1)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -13333,24 +13312,24 @@ a.anchor-link {
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>@drmandrake_ @LaMamert4 En orden de los productos no afecta el resultado. O si no mira la cantidad de figuras públicas que por no tragarse el sapo salieron a decir "voto en blanco" o "o que lindas ballenas"...ella muy a pesar hizo al lado diferencias y apoyo.</td>
+      <th>2672</th>
+      <td>RT @meridius_maximo: @marianoig007 Después de El Putero #ElPuntero viene El Tigre Huevón jeje\n#ElTigreVeron</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>@radiohrn Otro sapo</td>
+      <th>7673</th>
+      <td>@MelukLeCuenta Si no logra ver la diferencia entre  Samuel, Petro y Peñalosa usted es un mamerto, Petroño graduado y con maestría.</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Cómo le pueden dar micrófono a éste sapo!!! https://t.co/wfC4uqOWwy</td>
+      <th>10641</th>
+      <td>@Claudiashein Ay señora valla caminando de noche por Azcapotzalco  sin guardias sin lame culos y después hablamos</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>@titojosep2 Que buenaaa vergaa...si hay que ser sapo pa.mamalo...ya se pa comenzar a echar paja jajaja</td>
+      <th>6380</th>
+      <td>RT @DonIzquierdo_: Voté por Santos por defender la paz y sin haber empuñado un arma nunca\n\nVoté por Petro por un mejor país y sin ser castr…</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>RT @bravoanm: El peor sapo sentimiento del mundo. https://t.co/yHfYGgR5Lh</td>
+      <th>12648</th>
+      <td>@Shaankraa cerda</td>
     </tr>
   </tbody>
 </table>
@@ -13362,7 +13341,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13379,7 +13358,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">unicodedata</span>
@@ -13387,12 +13366,6 @@ a.anchor-link {
     <span class="n">accents</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">unicodedata</span><span class="o">.</span><span class="n">lookup</span><span class="p">,</span> <span class="n">accents</span><span class="p">))</span>
     <span class="n">chars</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFD&#39;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">accents</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFC&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">chars</span><span class="p">))</span>
-
-<span class="n">dfna</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;text&#39;</span><span class="p">:[</span><span class="n">remove_accents</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]]})</span>
-
-<span class="n">clean1</span> <span class="o">=</span> <span class="n">dfna</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">((</span><span class="sa">r</span><span class="s1">&#39;@[\w]*&#39;</span><span class="p">),</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">clean2</span> <span class="o">=</span> <span class="n">clean1</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;RT&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-<span class="n">clean</span> <span class="o">=</span> <span class="n">clean2</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z +^&#39;&#39;]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13417,7 +13390,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokens</span> <span class="o">=</span> <span class="p">[]</span> 
@@ -13440,7 +13413,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stop_words</span><span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;spanish&#39;</span><span class="p">))</span>
@@ -13458,25 +13431,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="CountVectorizer">CountVectorizer<a class="anchor-link" href="#CountVectorizer">&#182;</a></h3>
+<h3 id="Clasificaci&#243;n-no-supervisada">Clasificaci&#243;n no supervisada<a class="anchor-link" href="#Clasificaci&#243;n-no-supervisada">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">vectorized_data1</span> <span class="o">=</span> <span class="n">count_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span>
-<span class="n">indexed_data</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">vectorized_data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))[:,</span><span class="kc">None</span><span class="p">],</span> <span class="n">vectorized_data1</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13486,7 +13444,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">stop_words</span><span class="o">=</span><span class="n">stop_words</span><span class="p">)</span>
@@ -13497,22 +13455,27 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Clasificaci&#243;n-no-supervisada">Clasificaci&#243;n no supervisada<a class="anchor-link" href="#Clasificaci&#243;n-no-supervisada">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="k">import</span> <span class="n">KMeans</span> 
-<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>  
-<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vectorized_data</span><span class="p">)</span> 
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vectorized_data</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -13525,14 +13488,14 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[67]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>KMeans(algorithm=&#39;auto&#39;, copy_x=True, init=&#39;k-means++&#39;, max_iter=300,
-    n_clusters=3, n_init=30, n_jobs=1, precompute_distances=&#39;auto&#39;,
+    n_clusters=3, n_init=10, n_jobs=1, precompute_distances=&#39;auto&#39;,
     random_state=None, tol=0.0001, verbose=0)</pre>
 </div>
 
@@ -13544,11 +13507,10 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">est</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">vectorized_data</span><span class="p">)</span>
-<span class="n">est</span>
 </pre></div>
 
     </div>
@@ -13561,13 +13523,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[68]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([0, 2, 2, ..., 2, 2, 2], dtype=int32)</pre>
+<pre>array([2, 2, 2, ..., 2, 2, 2], dtype=int32)</pre>
 </div>
 
 </div>
@@ -13578,7 +13540,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## CANTIDAD DE TWEETS POR CLUSTER</span>
@@ -13599,9 +13561,9 @@ a.anchor-link {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0: 2520 
- 1: 2586 
- 2: 10938
+<pre>0: 1505 
+ 1: 660 
+ 2: 13879
 </pre>
 </div>
 </div>
@@ -13609,7 +13571,390 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div></section></section>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="CountVectorizer">CountVectorizer<a class="anchor-link" href="#CountVectorizer">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">vectorized_data1</span> <span class="o">=</span> <span class="n">count_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">clean</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">vectorized_data1</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>KMeans(algorithm=&#39;auto&#39;, copy_x=True, init=&#39;k-means++&#39;, max_iter=300,
+    n_clusters=3, n_init=10, n_jobs=1, precompute_distances=&#39;auto&#39;,
+    random_state=None, tol=0.0001, verbose=0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">est2</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">vectorized_data1</span><span class="p">)</span>
+<span class="n">est2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 1, 1, ..., 1, 1, 0], dtype=int32)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nosup2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;cluster&#39;</span><span class="p">:</span><span class="n">est2</span><span class="p">,</span><span class="s1">&#39;tweet&#39;</span><span class="p">:</span><span class="n">clean</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0:&#39;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> 1:&#39;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)),</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> 2:&#39;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="o">*</span><span class="p">(</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0: 2463 
+ 1: 11014 
+ 2: 2567
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nosup2</span><span class="p">[</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[85]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cluster</th>
+      <th>tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>Lo que omite mencionar el hoy blanqueado corroncho italiano es que Pastrana no ha sido muy claro en las explicaciones de las circunstancias de su viaje en ese avion Obvio que no se le puede sealar de la nada pero tampoco que guarde tanto silencio httpstcoPQAMIyDfH</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>Cual es el miedo Si su papa es tan honorable pues que lo demuestre uds no pueden esconder los pecados del gobierno Santos detras del proceso de pazSi ud Martin es tan critico pues tambien opine sobre odebrecht o sobre los falsos positivoso se siente impedido para hacerlo httpstcoOWYFLxRNM</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>0</td>
+      <td>Metase  en lo Suyo que es el senado que de por si lo hace muy Mal de FotografoHay si como dijo DiomedesNo sea sapo lambon Mar</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0</td>
+      <td>Esto es lo que va ir hacer para que llore mamerto de pacotilla httpstcocgccEoToR</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>0</td>
+      <td>Callese bobo hp que ut solo hace las cosas pa caerle bien a la gente y eso me dan ganas de vomitar todo el intestino que asco usted malparido estupido</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nosup2</span><span class="p">[</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[86]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cluster</th>
+      <th>tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Despues de El Putero ElPuntero viene El Tigre Huevon jejeElTigreVeron</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>Si no logra ver la diferencia entre  Samuel Petro y Pealosa usted es un mamerto Petroo graduado y con maestria</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>Ay seora valla caminando de noche por Azcapotzalco  sin guardias sin lame culos y despues hablamos</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>Vote por Santos por defender la paz y sin haber empuado un arma nuncaVote por Petro por un mejor pais y sin ser castr</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>cerda</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nosup2</span><span class="p">[</span><span class="n">nosup2</span><span class="p">[</span><span class="s1">&#39;cluster&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[87]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cluster</th>
+      <th>tweet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>Guerra civil de que bobo si hay algo cobarde es un uribestia tiran la piedra esconden la mano amenaza</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2</td>
+      <td>Ajaaaa paisa como la bandeja que venden en la esquina de su casa en Bosa perdedor malparido  httpstcouXTBZuExD</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2</td>
+      <td>Cry es el nuevo disco de CAS Dios que emocion tan brava poderlo ver maana y el miercoles Seguro mas de una lagrima se asomara por mi cara La vida habla y uno le responde con musica Fokiu men gonorrea</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2</td>
+      <td>Quizas porque es tan inutil como vos para este pais doa Paloma Un violador condenado a  aos no suele estar vivo para rehacer su dao entre tanto su politiqueria de circo busca solo ingenuos votos de su ejercito de idiotas utiles</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2</td>
+      <td>Hoy en mensajes amables de amigos sinceros Es que no debiste dejar de ser una malparida</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section></section>
 </div>
 </div>
 
