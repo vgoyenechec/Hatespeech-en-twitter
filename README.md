@@ -21,4 +21,3 @@ Debido a que las redes sociales son una gran influencia actualmente y que estas 
    * Bucaramanga
       * Datos: 24.000 tweets.
 
-## Referencias
