@@ -2,8 +2,8 @@
 
 # Detección de Hatespeech en Twitter
 <ul>
-   <li> Liceth Yaneth Rozo Quintana
    <li> Valentina Goyeneche Calderón
+   <li> Liceth Yaneth Rozo Quintana
 </ul>
 
 ## Motivación
